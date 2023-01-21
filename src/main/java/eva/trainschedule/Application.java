@@ -3,10 +3,10 @@ package eva.trainschedule;
 import eva.trainschedule.models.DataTime;
 import eva.trainschedule.models.Station;
 import eva.trainschedule.models.Train;
-import eva.trainschedule.repositories.implementation.StationRepositoryImpl;
-import eva.trainschedule.repositories.implementation.TrainRepositoryImpl;
 import eva.trainschedule.repositories.StationRepository;
 import eva.trainschedule.repositories.TrainRepository;
+import eva.trainschedule.repositories.implementation.StationRepositoryImpl;
+import eva.trainschedule.repositories.implementation.TrainRepositoryImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

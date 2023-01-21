@@ -4,11 +4,11 @@ import eva.trainschedule.models.DataTime;
 import eva.trainschedule.models.Station;
 import eva.trainschedule.models.Train;
 import eva.trainschedule.services.TrainFinderService;
-import eva.trainschedule.services.sort.Sorter;
 import eva.trainschedule.services.sort.SortByTime;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import eva.trainschedule.services.sort.Sorter;
 
 @Service
 public class TrainFinderServiceImpl implements TrainFinderService {

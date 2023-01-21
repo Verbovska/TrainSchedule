@@ -1,4 +1,4 @@
-package eva.trainschedule;
+package io04.trainschedule;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

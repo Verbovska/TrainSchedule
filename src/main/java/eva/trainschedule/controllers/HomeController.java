@@ -3,10 +3,10 @@ package eva.trainschedule.controllers;
 
 import eva.trainschedule.models.DataTime;
 import eva.trainschedule.models.Train;
-import eva.trainschedule.services.TrainService;
 import eva.trainschedule.services.StationService;
 import eva.trainschedule.services.TrainFinderService;
 
+import eva.trainschedule.services.TrainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
