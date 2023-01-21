@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit trains</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="stylesheet" th:href="@{/css/trains_and_admin.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="theme-default">
+<main>
+    <th:block th:if="${trains.findById(id) == null}">
+        2342
+    </th:block>
+    <th:block th:if="${trains.findById(id) != null}">
+        <form class="p-t-50 ">
+            <div class="wrapper wrapper--w1080 card-3">
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <div class= "text-1">
+                                <span style="white-space: pre-line" th:text="${trains.findById(id)}"></span>
+                            </div>
+                            <br>
+                            <div class="input-group1">
+                                <label>
+                                    <select class="input--style-1 select-1" name="stations" >
+                                        <option th:each="station:${stations}" th:value="${station}" th:text="${station}"></option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="input-group1">
+                                <label>
+                                    <input class="input--style-1" type="text" name="timeArr" placeholder="Час прибуття">
+                                </label>
+                            </div>
+                            <div class="input-group1">
+                                <label>
+                                    <input class="input--style-1" type="text" name="timeDep" placeholder="Чаc відправки">
+                                </label>
+                            </div>
+                            <tr>
+                                <td><input class="button-back" type="submit" name="addStation" value="Добавити станцію" /></td>
+                                <td><input class="button-back" type="submit" name="deleteStation" value="Видалити станцію" /></td>
+                            </tr>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <form>
+                <br>
+                <div class="wrapper wrapper--w720">
+                    <div class="train-group-trains text-1" th:each="key: ${trainStations.keySet()}">
+                        <span th:text="${key}"></span> :<br> Час прибуття: <span th:text="${trainStations.get(key).get(0)}"></span><br> Час відправки: <span th:text="${trainStations.get(key).get(1)}"></span>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </form>
+    </th:block>
+
+    <div class="button-context p-b-100">
+        <button class="button-back" onclick="window.location.href='/admin/train'" type="submit">Повернутись назад</button>
+    </div>
+</main>
+</body>
+</html>

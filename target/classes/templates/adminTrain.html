@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trains</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="stylesheet" th:href="@{/css/trains_and_admin.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body class="theme-default">
+<main>
+
+<form class="p-t-50">
+    <div class="wrapper wrapper--w1080 card-3">
+        <div class="card-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <div class="input-group1">
+                        <label for="trainId"></label><input class="input--style-1" type="text" name="trainId" id="trainId" placeholder="ID">
+                    </div>
+                    <div class="input-group1">
+                        <label>
+                            <input class="input--style-1" type="text" name="trainName" placeholder="Назва">
+                        </label>
+                    </div>
+                        <tr>
+                            <td><input class="button-back" type="submit" name="add" value="Добавити потяг" /></td>
+                            <td><input class="button-back" type="submit" name="edit" value="Редагувати потяг" /></td>
+                            <td><input class="button-back" type="submit" name="delete" value="Видалити потяг за ID" /></td>
+                        </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+    <div class="train-group-trains text-1">
+    <span style="white-space: pre-line" th:text="${trainsName}"></span>
+    </div>
+  </main>
+</body>
+</html>
