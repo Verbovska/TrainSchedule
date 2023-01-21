@@ -3,13 +3,13 @@ package eva.trainschedule.models;
 public class User {
     private Integer id;
     private String name;
-    private final String password;
+    //private final String password;
     private final String email;
 
-    public User(Integer id, String name, String password, String email) {
+    public User(Integer id, String name, String email) {
         this.id = id;
         this.name = name;
-        this.password = password;
+        //this.password = password;
         this.email = email;
     }
 
@@ -38,8 +38,8 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
+//                ", password='" + password + '\'' +
+//                ", email='" + email + '\'' +
                 '}';
     }
 }
